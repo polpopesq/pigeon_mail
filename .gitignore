@@ -1,27 +1,34 @@
-# Build output
-build/
-pigeon_mail
+# Auth session (contains live tokens — never commit)
+session.json
 
-# Compiled object files
-*.o
-*.obj
+# Supabase credentials if you ever move them to a config file
+config.json
+*.env
+.env*
 
-# CMake
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
+# nlohmann/json if you drop the header into the repo
+include/nlohmann/
 
-# IDE / editor
-.vscode/
-.idea/
-*.user
-*.suo
-*.sln.docinfo
+# SFML and other libs if vendored locally
+libs/
+external/
+vendor/
 
-# Windows
-Thumbs.db
-Desktop.ini
+# Test binaries
+tests/test_*
+!tests/test_*.cpp
 
-# macOS
-.DS_Store
+# GCC/Clang generated
+*.d
+*.a
+*.so
+*.dll
+*.exe
+
+# Valgrind / sanitizer output
+vgcore.*
+*.log
+
+# Packaging
+*.tar.gz
+*.zip

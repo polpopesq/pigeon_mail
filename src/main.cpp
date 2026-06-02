@@ -1,8 +1,9 @@
 #ifdef _WIN32
-  #include <windows.h>
+#include <windows.h>
 #endif
 
-#include "PigeonMailApp.h"
+#include "App.h"
+#include "ConsoleUI.h"
 
 int main() {
 #ifdef _WIN32
@@ -16,7 +17,10 @@ int main() {
     }
 #endif
 
-    PigeonMailApp app;
-    app.run();
+    App app;
+    ConsoleUI ui;
+    app.registerHandlers();  // App listens for Ui* events
+    ui.registerHandlers();   // UI listens for App* events — replays any queued
+    ui.run();
     return 0;
 }

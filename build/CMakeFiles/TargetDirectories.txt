@@ -1,0 +1,3 @@
+C:/Users/paulp/Desktop/pigeon_mail/build/CMakeFiles/pigeon_mail.dir
+C:/Users/paulp/Desktop/pigeon_mail/build/CMakeFiles/edit_cache.dir
+C:/Users/paulp/Desktop/pigeon_mail/build/CMakeFiles/rebuild_cache.dir

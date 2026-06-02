@@ -1,29 +1,25 @@
 #pragma once
-#include <string>
 #include <random>
+#include <string>
 
 struct PigeonStats {
-    int speed;       // 1-99: affects flight time
-    int accuracy;    // 1-99: chance message arrives intact
-    int stamina;     // 1-99: reduces fatigue penalty on long routes
-    int stealth;     // 1-99: chance of avoiding interception
-    int loyalty;     // 1-99: reduces chance of getting lost
+    int speed;     // 1-99: affects flight time
+    int accuracy;  // 1-99: chance message arrives intact
+    int stamina;   // 1-99: reduces fatigue penalty on long routes
+    int stealth;   // 1-99: chance of avoiding interception
+    int loyalty;   // 1-99: reduces chance of getting lost
 
     int overall() const {
         return (speed + accuracy + stamina + stealth + loyalty) / 5;
     }
 };
 
-enum class PigeonRarity {
-    Common,
-    Uncommon,
-    Rare,
-    Epic,
-    Legendary
-};
+enum class PigeonRarity { Common, Uncommon, Rare, Epic, Legendary };
 
 class Pigeon {
-public:
+   public:
+    std::string id;
+    std::string ownerName;
     std::string name;
     PigeonStats stats;
     PigeonRarity rarity;
@@ -31,7 +27,10 @@ public:
     int messagesSent;
     std::string description;
 
-    Pigeon(const std::string& name, PigeonStats stats, PigeonRarity rarity, const std::string& desc);
+    Pigeon(const std::string& name, PigeonStats stats, PigeonRarity rarity,
+           const std::string& desc);
+
+    void changeOwner(const std::string& newOwnerId);
 
     std::string rarityName() const;
     std::string rarityColor() const;  // ANSI color code
