@@ -1,3 +1,0 @@
-C:\Users\paulp\scoop\apps\cmake\current\bin\cmake.exe -E rm -f CMakeFiles\pigeon_mail.dir/objects.a
-C:\Users\paulp\scoop\apps\mingw\current\bin\ar.exe qc CMakeFiles\pigeon_mail.dir/objects.a @CMakeFiles\pigeon_mail.dir\objects1.rsp
-C:\Users\paulp\scoop\apps\mingw\current\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\pigeon_mail.dir/objects.a -Wl,--no-whole-archive -o pigeon_mail.exe -Wl,--out-implib,libpigeon_mail.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\pigeon_mail.dir\linkLibs.rsp
