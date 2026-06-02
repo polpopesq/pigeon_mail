@@ -14,6 +14,9 @@ libs/
 external/
 vendor/
 
+# Build folder
+build/
+
 # Test binaries
 tests/test_*
 !tests/test_*.cpp
